@@ -2,108 +2,148 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>cps</title>
+  <title>xampany</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="logo.png"/>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<body class="dark-mode">
-
-<div class="max-w-3xl mx-auto py-12 px-6">
-  <h1 class="text-4xl font-bold leading-tight mb-4">
-    cps</span>.
-  </h1>
-
-  <label class="switch">
-    <input type="checkbox" onclick="toggleMode()">
-    <span class="slider round"></span>
-  </label>
-  
-    </br>
-    </br>
-
-
-  <div class="cet">
-    <p class="the-time"></p>
-  </div>
-    </br>
-
-  <p class="text-lg mb-4">Benvingut. Web en construcció.</p>
-  <p class="text-lg mb-4">De moment, disfruta d'aquesta imatge.</p>
-
-  <figure class="max-w-lg mx-auto">
-    <img class="h-auto max-w-full rounded-lg" src="https://cdn.motor1.com/images/mgl/yKJwK/s1/2020-porsche-911-turbo.jpg" alt="Porsche 911 Turbo S">
-    <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Porsche 911 Turbo S</figcaption>
-  </figure>
-
-</br></br>
-
-
-  <p class="text-2xl font-bold leading-tight mb-4">Projectes:</p>
-
-<p class="text-lg">&#x2022;
-    <a href="https://blog.cps.cat" class="underline-link">Blog</a> 📃
-  </p>
-
-  <p class="text-lg">&#x2022;
-    <a href="https://www.911.cat" class="underline-link">911.cat</a> 🚗
-  </p>
-
-  <p class="text-lg">&#x2022;
-    <a href="https://time.cps.cat" class="underline-link">CAT/NY</a> 🕗
-  </p>
-
-  <p class="text-lg">&#x2022;
-    <a href="https://app.cps.cat" class="underline-link">App</a> 📱
-  </p>
-
-<p class="text-lg">&#x2022;
-    <a href="https://filo.cps.cat" class="underline-link">Filo</a> 💬
-  </p>
-
-
-  <p class="text-lg">&#x2022;
-    <a href="https://music.cps.cat" class="underline-link">Música</a> 🎧
-  </p>
-
-  <p class="text-lg">&#x2022;
-    <a href="https://de.cps.cat" class="underline-link">Flashcards</a> 🃏
-  </p>
-
-  <p class="text-lg">&#x2022;
-    <a href="https://sub.cps.cat" class="underline-link">Subtítols</a> 🗣️
-  </p>
-
-  <p class="text-lg">&#x2022;
-    <a href="https://www.cesc.design" class="underline-link">Design</a> 🖼️
-  </p>
-
-  <p class="text-lg">&#x2022;
-    <a href="https://www.reesc.com" class="underline-link">ReEsc</a> 😴
-  </p>
-
-  <p class="text-lg">&#x2022;
-    <a href="https://fine.cps.cat" class="underline-link">This is Fine</a> 🔥
-  </p>
-
-  <p class="text-lg">&#x2022;
-    <a href="https://paywall.cps.cat" class="underline-link">Paywall Remover</a> 🔗
-  </p>
-
-  <p class="text-lg">&#x2022;
-    <a href="https://lorem.cps.cat" class="underline-link">Lorem Ipsum</a> 📄
-  </p>
+<div class="mt-16">
+    <audio id="audioPlayer" src="https://raw.githubusercontent.com/cescps/music/main/songs/xampany.mp3" class="w-full" controls=""></audio>
 </div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-10-year-range.js'></script>
-<!-- partial -->
-  <script  src="./script.js"></script>
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mt-16 {
+        margin-top: 16px;
+    }
+
+    .mb-16 {
+        margin-bottom: 16px;
+    }
+
+    .w-full {
+        
+        margin-left: 20px; /* Adjust lateral margin for the player */
+        margin-right: 20px; /* Adjust lateral margin for the player */
+    }
+
+    .f-body-1 {
+        font-size: 1rem;
+        opacity: 0.5;
+        margin-left: 20px; /* Adjust lateral margin for the lyrics */
+        margin-right: 20px; /* Adjust lateral margin for the lyrics */
+        margin-bottom: 35px; /* Add bottom margin for the lyrics */
+
+    }
+</style>
+
+<br>
+
+<div id="lyricsContainer" class="mt-16 f-body-1">
+    <span data-time="8">Ens van enxampar</span><br>
+    <span data-time="10">mentre estàvem obrint el xampany</span><br>
+    <span data-time="13">Volíem celebrar que teníem "quartos" per tirar endavant</span><br>
+    <span data-time="18">Déu-n'hi-do</span><br>
+    <span data-time="20">el teu cul és dur de superar</span><br>
+    <span data-time="23">Bo de bo</span><br>
+    <span data-time="25">ja tinc gana només només de pensar</span><br>
+    <br>
+    <span data-time="28">Aquesta vida ‘m'aplasta’</span><br>
+    <span data-time="30">Teva novia una plasta</span><br>
+    <span data-time="31">Si ‘t'agobia’ pues basta</span><br>
+    <span data-time="32">Si hi ha ‘money’ se gasta</span><br>
+    <span data-time="34">Sense temps cuino pasta</span><br>
+    <span data-time="35">S'hi n'hi ha prou se subhasta</span><br>
+    <span data-time="36">I a l'últim moment sempre entrego la tasca</span><br>
+    <br>
+    <span data-time="39">De debò, no m’agrada fer-vos esperar</span><br>
+    <span data-time="43">Bo debò, sensе data de caducitat</span><br>
+    <span data-time="47">No maregis, que lo nostre és nostre i no ens ho treguis</span><br>
+    <span data-time="52">Si te'n falta no et preocupis sempre posem l'altra galta</span><br>
+    <br>
+    <span data-time="58">Del Penedès em porten cava</span><br>
+    <span data-time="60">A l’Empordà hi tinc casa, vida coronada</span><br>
+    <span data-time="63">Licor del delta, lo bo no s’acaba</span><br>
+    <span data-time="65">I encara tenim ‘puesto’ per alta calçotada</span><br>
+    <br>
+    <span data-time="67">Ens van enxampar</span><br>
+    <span data-time="69">mentre estàvem obrint el xampany</span><br>
+    <span data-time="72">Volíem celebrar que teníem "quartos" per tirar endavant</span><br>
+    <span data-time="77">Déu-n'hi-do</span><br>
+    <span data-time="79">el teu cul és dur de superar</span><br>
+    <span data-time="83">Bo de bo</span><br>
+    <span data-time="84">ja tinc gana només només de pensar</span><br>
+    <br>
+    <span data-time="87">Amb les mans a la massa</span><br>
+    <span data-time="89">I el mono ple de grassa</span><br>
+    <span data-time="90">De lo molt que t’estimo trobo que no en parlem massa</span><br>
+    <span data-time="93">El tonteig ja no sacia</span><br>
+    <span data-time="94">Explico l’acudit per evitar-nos la desgràcia</span><br>
+    <span data-time="97">Organitza el brindis,</span><br>
+    <span data-time="99">tantes coses que voldria dir-te</span><br>
+    <span data-time="101">Com que vull que em mimis,</span><br>
+    <span data-time="104">dia a dia et tornes un adicte</span><br>
+    <span data-time="107">Mantega al bikini</span><br>
+    <span data-time="109">i vull que et vinguis</span><br>
+    <span data-time="111">Culet de vi i el teu està twitchin’</span><br>
+    <span data-time="113">La sorpresa em deixa en estat cítric,(què?)</span><br>
+    <span data-time="115">Estat crític, (què?) (jaja,m’heu entès)</span><br>
+    <br>
+    <span data-time="119">Ens van enxampar</span><br>
+    <span data-time="121">mentre estàvem obrint el xampany</span><br>
+    <span data-time="123">Volíem celebrar</span><br>
+    <span data-time="125">que teníem "quartos" per tirar endavant</span><br>
+    <span data-time="128">Déu-n'hi-do</span><br>
+    <span data-time="130">el teu cul és dur de superar</span><br>
+    <span data-time="133">Bo de bo</span><br>
+    <span data-time="135">ja tinc gana només només de pensar</span><br>
+    <br>
+    <span data-time="140">Bona nit,</span><br>
+    <span data-time="143">ja s'acaba el 2023,</span><br>
+    <span data-time="146">amb molts d'èxits</span><br>
+    <span data-time="148">Que el 2024 ho pugueu doblar,</span><br>
+    <span data-time="152">mínim</span><br>
+    <span data-time="153">Sort, una abraçada</span><br>
+    <span data-time="156">i xampany i galetes per tots</span><br>
+</div>
+
+<script>
+    const audioPlayer = document.getElementById('audioPlayer');
+    const lyricsContainer = document.getElementById('lyricsContainer');
+    const lyricsSpans = lyricsContainer.querySelectorAll('span');
+
+    let isFirstLineShown = false;
+
+    audioPlayer.addEventListener('timeupdate', function () {
+        const currentTime = Math.floor(audioPlayer.currentTime);
+        if (!isFirstLineShown) {
+            // Show all lyrics with reduced opacity initially
+            lyricsSpans.forEach(span => {
+                span.style.opacity = '0.5';
+            });
+        }
+
+        lyricsSpans.forEach(span => {
+            const spanTime = parseInt(span.getAttribute('data-time'));
+            if (spanTime === currentTime) {
+                // Once the first line is shown, set isFirstLineShown to true
+                if (!isFirstLineShown) {
+                    isFirstLineShown = true;
+                }
+                span.style.opacity = '1';
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
